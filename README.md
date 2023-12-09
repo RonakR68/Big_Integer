@@ -8,19 +8,19 @@ The program is structured to handle large integers by implementing them as strin
 
 ## Functionalities:
 
-### 1. Solve Expression
+#### 1. Solve Expression
 
 Allows the user to input a mathematical expression involving big integers and operators (+, -, x, /). The program evaluates the expression and returns the result.
 
-###2. Exponentiation
+#### 2. Exponentiation
 
 Computes the power of a big integer.
 
-3. Greatest Common Divisor (GCD)
+#### 3. Greatest Common Divisor (GCD)
 
 Finds the GCD of two big integers.
 
-4. Factorial
+#### 4. Factorial
 
 Calculates the factorial of a given integer.
 
@@ -46,9 +46,13 @@ Follow the on-screen prompts to input data based on the chosen operation.
 
 ## Assumptions
 1. Negative numbers won’t be present in the intermediate or final output for any operation.
+
 2. There are no brackets in the input.
+
 3. Performs Integer division operation between two big integers, disregarding the remainder.
+
 4. Addition, Subtraction, Multiplication and Division follows the same precedence and associativity rules as in Java/cpp.
+
 5. Division by zero, gcd(0, x), gcd(x, 0) etc. will not be an input.
 
 
