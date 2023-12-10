@@ -34,14 +34,19 @@ template <class T> class stack{
     }
 
     void pop(){
-        node<T> *temp = front;
-        front = front->next;
-        free(temp);
+        if(front != nullptr){
+            node<T> *temp = front;
+            front = front->next;
+            delete temp;
+        }
     }
 
     T top(){
-        node <T> *t = front;
-        return t->val;
+        if(front != nullptr){
+            node <T> *t = front;
+            return t->val;
+        }
+        return T();
     }
 
     bool isEmpty(){
@@ -333,7 +338,7 @@ string SolveExp(string exp){
     if(!isExpressionValid(exp)) return "Expression entered is invalid.";
     stack <string> s_operand;
     stack <char> s_operator;
-    string res = "", operand = "";
+    string res = exp, operand = "";
     for(char c: exp){
         if(!isOperator(c)){
             //form operand string
@@ -378,6 +383,10 @@ string SolveExp(string exp){
 
 int main(){
 
+    int t;
+    cin>>t;
+    while(t--)
+    {
     int operation;
     cin>>operation; //get type of operation
 
@@ -422,6 +431,8 @@ int main(){
             break;
         }
         
+    }
+   
     }
     return 0;
 }
